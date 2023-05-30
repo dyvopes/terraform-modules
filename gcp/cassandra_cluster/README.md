@@ -1,13 +1,13 @@
 ### TODO
 
 - Cassandra config on input (as variable)
-- Switcher to public/private in provisioner
-- One place to change private/public
 - Node Exporter setup
 - Cassandra Exporter setup
 - Extra Disk with mount on Cassandra data directory
 - Disks backup (?)
 - SSH Key as a secret in Secret Manager
+- Switcher to public/private in provisioner
+- One place to change private/public
 - Node draining after new seed adding
 - Additional provisioners for exporters setup
 
@@ -18,14 +18,12 @@
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.4.0 |
 | <a name="requirement_google"></a> [google](#requirement\_google) | >= 4.38.0, < 5.0 |
-| <a name="requirement_google-beta"></a> [google-beta](#requirement\_google-beta) | ~> 4.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_google"></a> [google](#provider\_google) | >= 4.38.0, < 5.0 |
-| <a name="provider_google-beta"></a> [google-beta](#provider\_google-beta) | ~> 4.0 |
 | <a name="provider_null"></a> [null](#provider\_null) | n/a |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
 | <a name="provider_time"></a> [time](#provider\_time) | n/a |
@@ -39,10 +37,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [google-beta_google_compute_firewall.external_access](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/resources/google_compute_firewall) | resource |
-| [google-beta_google_compute_firewall.self_access](https://registry.terraform.io/providers/hashicorp/google-beta/latest/docs/resources/google_compute_firewall) | resource |
 | [google_compute_address.non_seeds](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_address) | resource |
 | [google_compute_address.seeds](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_address) | resource |
+| [google_compute_firewall.external_access](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
+| [google_compute_firewall.self_access](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
 | [google_compute_instance.non_seeds](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance) | resource |
 | [google_compute_instance.seeds](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance) | resource |
 | [null_resource.cluster_provisioning](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |

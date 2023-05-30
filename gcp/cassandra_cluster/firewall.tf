@@ -16,12 +16,13 @@ resource "google_compute_firewall" "self_access" {
 
   allow {
     protocol = "tcp"
-    ports    = ["7000-7001"]
-  }
-
-  allow {
-    protocol = "tcp"
-    ports    = ["7199"]
+    ports = [
+      "7000-7001",
+      "7199",
+      "9042",
+      "9160",
+      "9142"
+    ]
   }
 
   allow {
