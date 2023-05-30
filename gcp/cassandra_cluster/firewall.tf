@@ -6,10 +6,8 @@
 resource "google_compute_firewall" "self_access" {
   count = var.enable_firewall_rules && length(local.instance_tags) > 0 ? 1 : 0
 
-  name = "${var.name}-self"
-
-  provider = google-beta
-  project  = var.project_id
+  name    = "${var.name}-self"
+  project = var.project_id
 
   direction   = "INGRESS"
   network     = var.network
@@ -35,10 +33,8 @@ resource "google_compute_firewall" "self_access" {
 resource "google_compute_firewall" "external_access" {
   count = var.enable_firewall_rules && var.enable_external_access && length(local.instance_tags) > 0 && length(var.external_cidrs) > 0 ? 1 : 0
 
-  name = "${var.name}-ext-access"
-
-  provider = google-beta
-  project  = var.project_id
+  name    = "${var.name}-ext-access"
+  project = var.project_id
 
   direction     = "INGRESS"
   network       = var.network
