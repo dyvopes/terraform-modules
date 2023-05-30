@@ -8,6 +8,8 @@
 - Extra Disk with mount on Cassandra data directory
 - Disks backup (?)
 - SSH Key as a secret in Secret Manager
+- Node draining after new seed adding
+- Additional provisioners for exporters setup
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
