@@ -22,6 +22,6 @@ resource "random_integer" "non_seed_zone_ids" {
 resource "time_sleep" "userdata" {
   for_each = merge(google_compute_instance.seeds, google_compute_address.non_seeds)
 
-  depends_on = [google_compute_instance.seeds, google_compute_address.non_seeds]
+  depends_on      = [google_compute_instance.seeds, google_compute_address.non_seeds]
   create_duration = "120s"
 }

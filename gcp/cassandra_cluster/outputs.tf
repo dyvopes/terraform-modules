@@ -18,10 +18,10 @@ output "ssh_key" {
 
 output "cluster_nodes_ips" {
   description = "All cluster nodes ips."
-  value = local.cluster_nodes_ips
+  value       = local.cluster_nodes_ips
 }
 
 output "nodes_count" {
   description = "The number of nodes in cluster."
-  value = length(local.cluster_nodes_ips)
+  value       = length(local.cluster_nodes_ips)
 }
