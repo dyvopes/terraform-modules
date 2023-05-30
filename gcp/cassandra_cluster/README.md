@@ -1,6 +1,8 @@
 ### TODO
 
 - Cassandra config on input (as variable)
+- Switcher to public/private in provisioner
+- One place to change private/public
 - Node Exporter setup
 - Cassandra Exporter setup
 - Extra Disk with mount on Cassandra data directory
